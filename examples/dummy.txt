@@ -1,0 +1,5 @@
+Examples:
+=========
+
+Beep.ino	- example for beep
+Interval.ino	- example for interval beep

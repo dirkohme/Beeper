@@ -5,12 +5,15 @@
 ###########################################
 # Datatypes (KEYWORD1)
 ###########################################
-CBeeper ESP8266 KEYWORD1
+CBeeper			KEYWORD1
 
 ###########################################
 # Methods and Functions (KEYWORD2)
 ###########################################
-beep KEYWORD2
+Init			KEYWORD2
+Beep			KEYWORD2
+Interval		KEYWORD2
+SetFrequency		KEYWORD2
 
 ###########################################
 # Constants (LITERAL1)

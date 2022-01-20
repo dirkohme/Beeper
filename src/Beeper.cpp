@@ -37,10 +37,10 @@
 //----------------------------------------------------------------------------
 // constructor
 //----------------------------------------------------------------------------
-CBeeper::CBeeper(const int  iGPIO    /*= -1*/,
-                 const int  iGPIONeg /*= -1*/,
-                 const bool boNeg    /*= false*/,
-		 const bool boAuto   /*= false*/)
+Beeper::Beeper(const int  iGPIO    /*= -1*/,
+               const int  iGPIONeg /*= -1*/,
+	       const bool boNeg    /*= false*/,
+	       const bool boAuto   /*= false*/)
 {
 	InitInternal(iGPIO, iGPIONeg, boNeg, boAuto);
 }
@@ -48,10 +48,10 @@ CBeeper::CBeeper(const int  iGPIO    /*= -1*/,
 //----------------------------------------------------------------------------
 // init internally
 //----------------------------------------------------------------------------
-void CBeeper::InitInternal(const int  iGPIO    /*= -1*/,
-                           const int  iGPIONeg /*= -1*/,
-                           const bool boNeg    /*= false*/,
-			   const bool boAuto   /*= false*/)
+void Beeper::InitInternal(const int  iGPIO    /*= -1*/,
+                          const int  iGPIONeg /*= -1*/,
+			  const bool boNeg    /*= false*/,
+			  const bool boAuto   /*= false*/)
 {
 	m_boAuto         = boAuto;
 	m_boInit         = (iGPIO >= 0) ? true : false;
@@ -65,10 +65,10 @@ void CBeeper::InitInternal(const int  iGPIO    /*= -1*/,
 //----------------------------------------------------------------------------
 // init
 //----------------------------------------------------------------------------
-bool CBeeper::Init(const int  iGPIO    /*= -1*/,
-                   const int  iGPIONeg /*= -1*/,
-                   const bool boNeg    /*= false*/,
-		   const bool boAuto   /*= false*/)
+bool Beeper::Init(const int  iGPIO    /*= -1*/,
+                  const int  iGPIONeg /*= -1*/,
+		  const bool boNeg    /*= false*/,
+		  const bool boAuto   /*= false*/)
 {
 	if (iGPIO >= 0)
 	{
@@ -93,7 +93,7 @@ bool CBeeper::Init(const int  iGPIO    /*= -1*/,
 //----------------------------------------------------------------------------
 // beep
 //----------------------------------------------------------------------------
-void CBeeper::Beep(const int iMicroSec /*= 100000*/)
+void Beeper::Beep(const int iMicroSec /*= 100000*/)
 {
 	// check mode
 	if (m_boInit == false)
@@ -136,7 +136,7 @@ void CBeeper::Beep(const int iMicroSec /*= 100000*/)
 //----------------------------------------------------------------------------
 // interval beep
 //----------------------------------------------------------------------------
-void CBeeper::Interval(const int iMicroSec /*= 100000*/)
+void Beeper::Interval(const int iMicroSec /*= 100000*/)
 {
 	int iTime = iMicroSec >> 1;
 
@@ -147,7 +147,7 @@ void CBeeper::Interval(const int iMicroSec /*= 100000*/)
 //----------------------------------------------------------------------------
 // set frequency
 //----------------------------------------------------------------------------
-bool CBeeper::SetFrequency(const int iFreq /*= 5000*/)
+bool Beeper::SetFrequency(const int iFreq /*= 5000*/)
 {
 	bool boResult = false;
 	

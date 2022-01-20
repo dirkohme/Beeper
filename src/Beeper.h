@@ -24,7 +24,7 @@
 
 #pragma once
 
-class CBeeper {
+class Beeper {
 public:
 protected:
 	bool		m_boAuto;
@@ -46,10 +46,10 @@ public:
 	// @param iGPIONeg second GPIO pin
 	// @param boNeg negate output logic
 	// @param boAuto true on automatic beeper
-	CBeeper(const int  iGPIO    = -1,
-	        const int  iGPIONeg = -1,
-	        const bool boNeg    = false,
-		const bool boAuto   = false);
+	Beeper(const int  iGPIO    = -1,
+	       const int  iGPIONeg = -1,
+	       const bool boNeg    = false,
+	       const bool boAuto   = false);
 	
 	// initialization
 	// @param iGPIO first GPIO pin or -1 to keep setting

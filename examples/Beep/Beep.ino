@@ -18,8 +18,8 @@
 #include <Beeper.h>
 
 //---| static variables |-----------------------------------------------------
-bool    boToggle_m = false;
-CBeeper coBeep_m(D8, D0, false);
+bool   boToggle_m = false;
+Beeper coBeep_m(D8, D0, false);
 
 //------------------------------------------------------------------------------
 // setup routine

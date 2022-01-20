@@ -1,4 +1,4 @@
-# CBeeper-Library
+# Beeper-Library
 
 The purpose of this library is to control a piezo crystal and make sound
 with it. The piezo may either have electronic or be connected directly
@@ -7,12 +7,12 @@ The piezo can be connected either to one GPIO or two: The later the GPIO
 pins are set to different levels in order to have most volume out of the
 piezo crystal.
 
-## CBeeper
+## Beeper
 
 This class holds all stuff needed.
 
 ### Constructor
-CBeeper(iGPIO, iGPIONeg, boNeg, boAuto)
+Beeper(iGPIO, iGPIONeg, boNeg, boAuto)
 - iGPIO = first GPIO pin on that the piezo crystal is connected or -1 if unused
 - iGPIONeg = second GPIO pin or -1 if unused
 - boNeg = controls output logic (default false)
@@ -35,6 +35,7 @@ CBeeper(iGPIO, iGPIONeg, boNeg, boAuto)
 ## Releases
 
 - 1.0.0 Initial release.
+- 1.0.1 Naming convention
 
 ## How to install
 
